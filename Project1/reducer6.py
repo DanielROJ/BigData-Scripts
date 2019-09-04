@@ -6,9 +6,6 @@ def reducer():
     block = True;
     count = 0;
     arrDy = [];
-
-    arrCost =[];
-
     for i in sys.stdin:
 
         tmp = i.strip().split(',');
@@ -25,7 +22,7 @@ def reducer():
                     arrDy.append(city);
                     count += 1
             else:
-                arrCost.append(count);
+                print('{},{}'.format(count,1));
                 mem = condado;
                 count = 1
                 arrDy.clear();
@@ -34,10 +31,6 @@ def reducer():
             mem = condado;
             block = False;
             count += 1;
-
-    [ print(arrCost.count(x),x) for x in list(set(arrCost))]
-
-
 
 
 reducer();
